@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="15dp"
+    android:layout_marginLeft="17dp"
+    android:layout_marginRight="17dp"
+    android:layout_marginBottom="5dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/label_foto_carro"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="8dp"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:src="@drawable/ic_launcher_background" />
+
+        <TextView
+            android:id="@+id/label_nome_carro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/label_foto_carro"
+            android:text="Carro"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_nome_carro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_nome_carro"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/label_foto_carro"
+            android:text="VW Gol"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <TextView
+            android:id="@+id/label_preco_carro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nome_carro"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/label_foto_carro"
+            android:text="Valor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_preco_carro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/label_preco_carro"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/label_foto_carro"
+            android:gravity="left"
+            android:text="R$ 80.000"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+        <ImageButton
+            android:id="@+id/btn_adicionar_carrinho"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_preco_carro"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/label_foto_carro"
+            android:background="@android:color/holo_blue_light"
+            android:src="@drawable/ic_cart" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
