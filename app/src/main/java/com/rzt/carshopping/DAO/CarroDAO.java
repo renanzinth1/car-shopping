@@ -13,12 +13,12 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ClienteDAO {
+public class CarroDAO {
 
     private Api api;
     private Context context;
 
-    public ClienteDAO(Context context) {
+    public CarroDAO(Context context) {
         this.api = new Api();
         this.context = context;
     }

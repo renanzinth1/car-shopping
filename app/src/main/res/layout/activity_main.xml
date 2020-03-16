@@ -20,17 +20,18 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:src="@drawable/ic_launcher_background"
-                android:scaleType="fitXY"/>
+                android:scaleType="fitXY"
+                android:src="@drawable/carros" />
+
             <Button
                 android:id="@+id/btn_listar_carros"
+                style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.AppCompat.Button.Borderless"
-                android:textAppearance="@style/TextAppearance.AppCompat.Button"
-                android:textColor="#FFFFFF"
+                android:background="@color/colorPrimary"
                 android:text="Listar Carros"
-                android:background="@android:color/holo_purple"/>
+                android:textAppearance="@style/TextAppearance.AppCompat.Button"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

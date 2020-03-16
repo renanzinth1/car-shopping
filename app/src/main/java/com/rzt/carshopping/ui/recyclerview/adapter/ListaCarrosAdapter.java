@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.rzt.carshopping.R;
 import com.rzt.carshopping.model.Carro;
+import com.rzt.carshopping.util.PicassoUtil;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -58,6 +59,7 @@ public class ListaCarrosAdapter extends RecyclerView.Adapter<ListaCarrosAdapter.
         private TextView campoNome;
         private TextView campoPreco;
         private ImageView campoFoto;
+
         private Carro carro;
 
         public ViewHolder(@NonNull View itemView) {
@@ -75,15 +77,14 @@ public class ListaCarrosAdapter extends RecyclerView.Adapter<ListaCarrosAdapter.
 
         public void vincula(Carro carro) {
             this.carro = carro;
+
+            new PicassoUtil(context, campoFoto).carregarImagemCarro(carro);
+
             campoNome.setText(carro.getNome());
             campoPreco.setText(Integer.toString(carro.getPreco()));
 
-            Picasso.with(context)
-                    .load(carro.getImagem())
-                    .error(R.drawable.img_unvailable)
-                    .fit()
-                    .centerInside()
-                    .into(campoFoto);
+
+
         }
     }
 
