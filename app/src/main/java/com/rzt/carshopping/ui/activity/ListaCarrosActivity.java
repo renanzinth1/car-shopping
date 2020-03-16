@@ -34,6 +34,7 @@ public class ListaCarrosActivity extends AppCompatActivity {
         rvListaCarros = findViewById(R.id.rv_lista_carros);
 
         CarroHelper carrHelp = new CarroHelper(this, ListaCarrosActivity.this);
+        
         carrHelp.listarCarros(new CarroCallback() {
             @Override
             public void onCarroReceived(List<Carro> carros) {
